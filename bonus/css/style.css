@@ -1,5 +1,6 @@
 /* in questa versione ho voluto utilizzare vh per tutte le altezze degli elementi principali in modo da migliorare la responsiveness (guardando l'inspector mi pare che il risultato sia preciso su diversi dispositivi, tenuto conto del vincolo di non voler far scorrere la pagina).
-inoltre ho eliminato i bordi a favore dei margini */
+inoltre ho eliminato i bordi a favore dei margini e ho introdotto float left.
+nb: non ho avuto bisogno del clearfix perchè avevo già dato un'altezza al contenitore. */
 
 * {
   margin: 0;
@@ -51,6 +52,7 @@ section:last-child > * {
   width: 100%;
   height: 20%;
   margin-bottom: 1vh;
+  float: left;
 }
 section:last-child > :not(.top) {
   height: calc(100% - (20% + 2vh));
