@@ -40,8 +40,30 @@ section:first-child {
 
 section:last-child {
   width: 100%;
-  height: calc(100% - (40% + 2%));
+  height: calc(100% - (40% + 1%));
+  background-color: yellow;
+}
+section:last-child > * {
   background-color: rgb(171 207 231);
+}
+.top {
+  width: 100%;
+  height: 20%;
+  border-bottom: 10px solid rgb(0 134 255);
+}
+section:last-child > :not(.top) {
+  /* nb per me: attenzione che la height in percentuale non funziona come il margin: la height prende la percentuale dalla height del genitore, il margin dalla width del genitore */
+  height: 80%;
+  display: inline-block;
+}
+.left, .right {
+  width: 20%;
+  border-bottom: 10px solid rgb(0 134 255);
+}
+.center {
+  width: 60%;
+  border: 10px solid rgb(0 134 255);
+  border-top: none;
 }
 
 footer {
